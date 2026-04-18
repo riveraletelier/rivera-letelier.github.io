@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head>
+
 <style>
 :root {
   --bg-primary: #121212;
@@ -13,35 +14,22 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   margin: 0;
-  padding: 20px;
-}
-header, main, footer {
-  background: var(--bg-secondary);
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 8px;
 }
 a { color: var(--accent); }
 
 .gallery {
-  max-width: 1200px;
-  margin: 40px auto;
-}
-.gallery h2 {
-  text-align: center;
-  color: var(--text-primary);
-  margin-bottom: 30px;
-}
-.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin: 20px 40px 40px 0;  /* Flush left */
+  max-width: 900px;
 }
 figure {
   background: var(--bg-secondary);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin: 0;
 }
 figure img {
   width: 100%;
@@ -53,60 +41,63 @@ figcaption {
   color: var(--text-secondary);
   text-align: center;
 }
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
 
+@media (max-width: 1024px) {
+  .gallery > figure { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .gallery > figure { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 
 <html>
-<body>
+  <body>
 
-<h1>Juan Rivera-Letelier</h1>
-<h2>Mathematician</h2>
+    <h1>Juan Rivera-Letelier</h1>
+    <h2>Mathematician</h2>
 
-<hr>
+    <hr>
 
-<section class="gallery">
-  <h2>Gallery</h2>
+    <h3>Gallery</h3>
+    
+    <h4>Singular moduli</h4>
 
-  <figure>
-    <img src="figures/singular_moduli_2_35_web.png" alt="singular moduli 1">
-    <figcaption>Singular moduli of discriminant 2^{-35}</figcaption>
-  </figure>
-  <figure>
-    <img src="figures/singular_moduli_2_39_web.png" alt="singular moduli 2">
-    <figcaption>Singular moduli of discriminant 2^{-37}</figcaption>
-  </figure>
-  <figure>
-    <img src="figures/singular_moduli_2_43_web.png" alt="singular moduli 3">
-    <figcaption>Singular moduli of discriminant 2^{-43}</figcaption>
-  </figure>
-</section>
+    <section class="gallery">
 
-<hr>
+      <figure>
+	<img src="figures/singular_moduli_2_35_web.png" alt="singular moduli 1">
+	<figcaption>Discriminant 2^(-35)</figcaption>
+      </figure>
+      <figure>
+	<img src="figures/singular_moduli_2_39_web.png" alt="singular moduli 2">
+	<figcaption>Discriminant 2^(-37)</figcaption>
+      </figure>
+      <figure>
+	<img src="figures/singular_moduli_2_43_web.png" alt="singular moduli 3">
+	<figcaption>Discriminant 2^(-43)</figcaption>
+      </figure>
+    </section>
 
-<h2>Links</h2>
+    <hr>
 
-<h3>Research</h3>
-<ul>
-<li><a href = "http://www.krajina-znalosti.com/id32402/ve%282da/pr%282i%281rodni%281_ve%282dy/matematika/_pro_ucebnici/Hardy/Hardy_-_A%20Mathematician%27s%20Apology.pdf">A mathematician's apology</a>, <a href = "https://en.wikipedia.org/wiki/G._H._Hardy">Hardy</a>.</li>
-<li><a href = "https://archive.org/download/mathematiciansmi033496mbp/mathematiciansmi033496mbp.pdf">A mathematician's miscellany</a>, <a href = "https://en.wikipedia.org/wiki/John_Edensor_Littlewood">Littlewood</a>.</li>
-<li><a href = "https://spinlab.me/2017/07/30/claude-shannons-1952-lecture-on-creative-thinking/">Claude Shannon’s 1952 Lecture on Creative Thinking,</a> <a href = "https://en.wikipedia.org/wiki/Robert_G._Gallager">Robert G. Gallager</a>.</li>
-<li><a href = "http://hamilton.nuigalway.ie/teachingWeb/MA180/thurston.pdf">On proof and progress in mathematics</a>, <a href = "https://en.wikipedia.org/wiki/William_Thurston">Thurston</a>.</li>
-<!--
-<a href = "">CUNY Einstein Chair Mathematics Seminar Video Collection</a>.
--->
-</ul>
+    <h2>Links</h2>
 
-<h3>Undergrads</h3>
-<ul>
-  <li><a href = "https://www.youtube.com/watch?v=6NKa-iwBJFc&t=20s">Anatomy of a proof,</a> <a href = "https://math.katestange.net/">Katherine Stange</a>.</li>
-</ul>
+    <h3>Research</h3>
+    <ul>
+      <li><a href = "http://www.krajina-znalosti.com/id32402/ve%282da/pr%282i%281rodni%281_ve%282dy/matematika/_pro_ucebnici/Hardy/Hardy_-_A%20Mathematician%27s%20Apology.pdf">A mathematician's apology</a>, <a href = "https://en.wikipedia.org/wiki/G._H._Hardy">Hardy</a>.</li>
+      <li><a href = "https://archive.org/download/mathematiciansmi033496mbp/mathematiciansmi033496mbp.pdf">A mathematician's miscellany</a>, <a href = "https://en.wikipedia.org/wiki/John_Edensor_Littlewood">Littlewood</a>.</li>
+      <li><a href = "https://spinlab.me/2017/07/30/claude-shannons-1952-lecture-on-creative-thinking/">Claude Shannon’s 1952 Lecture on Creative Thinking,</a> <a href = "https://en.wikipedia.org/wiki/Robert_G._Gallager">Robert G. Gallager</a>.</li>
+      <li><a href = "http://hamilton.nuigalway.ie/teachingWeb/MA180/thurston.pdf">On proof and progress in mathematics</a>, <a href = "https://en.wikipedia.org/wiki/William_Thurston">Thurston</a>.</li>
+      <!--
+	  <a href = "">CUNY Einstein Chair Mathematics Seminar Video Collection</a>.
+	  -->
+    </ul>
 
+    <h3>Undergrads</h3>
+    <ul>
+      <li><a href = "https://www.youtube.com/watch?v=6NKa-iwBJFc&t=20s">Anatomy of a proof,</a> <a href = "https://math.katestange.net/">Katherine Stange</a>.</li>
+    </ul>
 
-</body>
-</html> 
+  </body>
+</html>
